@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 final class RegisterGarageJsonView
 {
     public function generateView(
-        RegisterGarageRequest $registerGarageRequest,
         RegisterGarageJsonViewModel $viewModel
     ): JsonResponse {
         if ($viewModel->violations) {
@@ -22,7 +21,7 @@ final class RegisterGarageJsonView
                 'address' => $viewModel->address,
                 'siren' => $viewModel->siren,
                 'message' => 'Garage a été créé avec succès'
-            ]
+            ], 201
         );
     }
 }

@@ -14,6 +14,9 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/register-via-html-form', name: 'app_register_user')]
 /**
  * @ParamConverter(name="registerUserRequest", converter="FormToRegisterRequestConverter")
+ *
+ * Since SF 6.3 use MapRequestPayload
+ * https://symfony.com/blog/new-in-symfony-6-3-mapping-request-data-to-typed-objects
  */
 class RegisterUserController extends AbstractController
 {
@@ -22,7 +25,6 @@ class RegisterUserController extends AbstractController
 		private readonly RegisterUserUseCaseInterface $registerUseCase,
 		private readonly RegisterUserHtmlPresenter $presenter)
 	{}
-
 
     public function __invoke(RegisterUserRequest $registerUserRequest): Response
     {

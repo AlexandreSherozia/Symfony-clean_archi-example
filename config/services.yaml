@@ -26,8 +26,5 @@ services:
     App\Application\Symfony\ParamConverter\FormToUpdateUserRequestConverter:
         tags:
             - { name: request.param_converter, converter: FormToUpdateUserRequestConverter}
-    App\Application\Symfony\ParamConverter\JsonToRegisterGarageRequestConverter:
-        tags:
-            - { name: request.param_converter, converter: JsonToRegisterGarageRequestConverter }
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

@@ -33,7 +33,7 @@ class RegisterHtmlView
 				]
 			));
 		}
-//dd($viewModel->violations);
+
 		$form = $this->formFactory->createBuilder(RegisterUserType::class, $registerUserRequest)->getForm();
 
 		return new Response($this->twig->render(
