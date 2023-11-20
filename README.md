@@ -12,11 +12,11 @@ yarn run build
 #POST
 #https://127.0.0.1:8000/api/garage
 
-#Click on raw of Body Tab, then add the following parameters :
+Click on Raw of Body Tab, then add the following parameters :
 
-#{
- #   "name": "My Garage with clean archi test",
- #   "address": "rue de test",
- #   "siren": "12345678901234"
-#}
+{
+  "name": "My Garage with clean archi test",
+  "address": "rue de test",
+  "siren": "12345678901234"
+}
 
