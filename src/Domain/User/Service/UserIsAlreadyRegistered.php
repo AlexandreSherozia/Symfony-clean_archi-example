@@ -2,7 +2,21 @@
 
 namespace App\Domain\User\Service;
 
-class UserIsAlreadyRegistered
-{
+use App\Domain\User\Repository\UserRepositoryInterface;
 
+final class UserIsAlreadyRegistered
+{
+	private UserRepositoryInterface $userRepository;
+
+	public function __construct(UserRepositoryInterface $userRepository)
+	{
+		$this->userRepository = $userRepository;
+	}
+
+	public function isSatisfiedBy(string $email): bool
+	{
+		$user = $this->userRepository->findOneBy(['email'=>$email]);
+
+		return $user !== null;
+	}
 }

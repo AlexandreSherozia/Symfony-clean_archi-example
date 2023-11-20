@@ -16,9 +16,18 @@ services:
     App\:
         resource: '../src/'
         exclude:
-            - '../src/DependencyInjection/'
-            - '../src/Entity/'
-            - '../src/Kernel.php'
+            - '../src/Application/Symfony/DependencyInjection/'
+            - '../src/Application/Symfony/Entity/'
+            - '../src/Application/Symfony/Kernel.php'
 
+    App\Application\Symfony\ParamConverter\FormToRegisterRequestConverter:
+        tags:
+            - { name: request.param_converter, converter: FormToRegisterRequestConverter}
+    App\Application\Symfony\ParamConverter\FormToUpdateUserRequestConverter:
+        tags:
+            - { name: request.param_converter, converter: FormToUpdateUserRequestConverter}
+    App\Application\Symfony\ParamConverter\JsonToRegisterGarageRequestConverter:
+        tags:
+            - { name: request.param_converter, converter: JsonToRegisterGarageRequestConverter }
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

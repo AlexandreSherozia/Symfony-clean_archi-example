@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\UseCase\User\Register;
+namespace App\Domain\User\UseCase\Register;
 
 use App\Domain\User\Entity\User;
 use App\Domain\User\Exception\UserAlreadyExistsException;
@@ -9,18 +9,10 @@ use App\Domain\User\Service\UserIsAlreadyRegistered;
 
 class RegisterUserUseCase implements RegisterUserUseCaseInterface
 {
-
-	private UserRepositoryInterface $userRepository;
-	private UserIsAlreadyRegistered $userIsAlreadyRegistered;
-
 	public function __construct(
-		UserRepositoryInterface $userRepository,
-		UserIsAlreadyRegistered $userIsAlreadyRegistered)
-	{
-		$this->userRepository = $userRepository;
-		$this->userIsAlreadyRegistered = $userIsAlreadyRegistered;
-	}
-
+		private readonly UserRepositoryInterface $userRepository,
+		private readonly UserIsAlreadyRegistered $userIsAlreadyRegistered)
+	{}
 	public function execute(RegisterUserRequest $registerRequest, RegisterUserPresenterInterface $presenter): void
 	{
 		$registerUserResponse = new RegisterUserResponse();

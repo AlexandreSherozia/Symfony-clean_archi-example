@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\UseCase\User\ShowList;
+namespace App\Domain\User\UseCase\ShowList;
 
 interface ShowListUseCaseInterface
 {

@@ -1,19 +1,16 @@
 <?php
 
-namespace App\Infrastructure\Symfony\ParamConverter;
+namespace App\Application\Symfony\ParamConverter;
 
+use App\Application\Symfony\Service\UpdateUserValidator;
 use App\Domain\User\Repository\UserRepositoryInterface;
 use App\Domain\User\UseCase\Edit\UpdateUserRequest;
-use App\Infrastructure\Symfony\Service\UpdateUserValidator;
-use App\Infrastructure\Symfony\Service\UserRegisterValidator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
 
 class FormToUpdateUserRequestConverter implements ParamConverterInterface
 {
-
 	private UpdateUserValidator $validator;
 	private UserRepositoryInterface $userRepository;
 
@@ -32,10 +29,9 @@ class FormToUpdateUserRequestConverter implements ParamConverterInterface
 		$updateUserRequest->email = $user->getEmail();
 		$updateUserRequest->firstName = $user->getFirstName();
 		$updateUserRequest->lastName = $user->getLastName();
-//		dd($updateUserRequest);
+
 		$isPosted = $updateUserData['update_user']['isPosted']??null;
 		if ($isPosted) {
-//			dd($updateUserData,$request->get('userId'),$user);
 			$updateUserRequest->violations = $this->validator->getErrors($updateUserData['update_user'] ?? null);
 			$updateUserRequest->isPosted=(bool)(int) $isPosted;
 			$updateUserRequest->email=$updateUserData['update_user']['email']??null;

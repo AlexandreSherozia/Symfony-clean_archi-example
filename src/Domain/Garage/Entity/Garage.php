@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Garage;
+namespace App\Domain\Garage\Entity;
 
 class Garage
 {
@@ -42,5 +42,19 @@ class Garage
         $this->address = $address;
 
         return $this;
+    }
+
+    public static function createGarage(
+        string $name,
+        string $address,
+        string $siren): self
+    {
+        $garage = new self();
+        $garage
+            ->setName($name)
+            ->setSiren($siren)
+            ->setAddress($address);
+
+        return $garage;
     }
 }

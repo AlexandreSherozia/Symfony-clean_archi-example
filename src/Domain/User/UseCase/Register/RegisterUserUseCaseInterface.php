@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\UseCase\User\Register;
+namespace App\Domain\User\UseCase\Register;
 
 interface RegisterUserUseCaseInterface
 {

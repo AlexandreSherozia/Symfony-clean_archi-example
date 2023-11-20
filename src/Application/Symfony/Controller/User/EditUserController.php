@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Infrastructure\Symfony\Controller\User;
+namespace App\Application\Symfony\Controller\User;
 
+use App\Application\Symfony\View\UpdateUserHtmlView;
 use App\Domain\User\UseCase\Edit\UpdateUserRequest;
 use App\Domain\User\UseCase\Edit\UpdateUserUseCaseInterface;
-use App\Infrastructure\Symfony\View\UpdateUserHtmlView;
 use App\Presentation\User\UpdateUserHtmlPresenter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

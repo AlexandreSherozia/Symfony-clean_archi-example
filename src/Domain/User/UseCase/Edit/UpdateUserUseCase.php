@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\UseCase\User\Edit;
+namespace App\Domain\User\UseCase\Edit;
 
 use App\Domain\User\Entity\User;
 use App\Domain\User\Repository\UserRepositoryInterface;

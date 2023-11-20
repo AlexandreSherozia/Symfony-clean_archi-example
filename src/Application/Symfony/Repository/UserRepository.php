@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Symfony\Repository;
+namespace App\Application\Symfony\Repository;
 
 use App\Domain\User\Entity\User as DomainUser;
 use App\Domain\User\Repository\UserRepositoryInterface;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
-use App\Infrastructure\Symfony\Entity\User;
+use App\Application\Symfony\Entity\User;
 
 final class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface, UserRepositoryInterface
 {

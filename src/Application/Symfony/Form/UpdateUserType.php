@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Symfony\Form;
+namespace App\Application\Symfony\Form;
 
 use App\Domain\User\UseCase\Edit\UpdateUserRequest;
 use Symfony\Component\Form\AbstractType;

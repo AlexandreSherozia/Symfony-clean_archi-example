@@ -2,7 +2,8 @@
 
 namespace App\Presentation\User;
 
-class RegisterUserHtmlViewModel
+final class RegisterUserHtmlViewModel
 {
-
+	public ?string $email;
+	public ?array $violations;
 }

@@ -1,18 +1,16 @@
 <?php
 
-namespace App\Infrastructure\Symfony\ParamConverter;
+namespace App\Application\Symfony\ParamConverter;
 
+use App\Application\Symfony\Service\UserRegisterValidator;
 use App\Domain\User\UseCase\Register\RegisterUserRequest;
-use App\Infrastructure\Symfony\Service\UserRegisterValidator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
 use Symfony\Component\Uid;
 
 class FormToRegisterRequestConverter implements ParamConverterInterface
 {
-
 	private UserRegisterValidator $validator;
 
 	public function __construct(UserRegisterValidator $validator)

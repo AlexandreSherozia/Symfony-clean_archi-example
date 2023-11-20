@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Infrastructure\Symfony\Controller\User;
+namespace App\Application\Symfony\Controller\User;
 
+use App\Application\Symfony\View\ShowListHtmlView;
 use App\Domain\User\UseCase\ShowList\ShowListPresenterInterface;
 use App\Domain\User\UseCase\ShowList\ShowListUseCaseInterface;
-use App\Infrastructure\Symfony\View\ShowListHtmlView;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 

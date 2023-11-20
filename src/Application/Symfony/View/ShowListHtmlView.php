@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Symfony\View;
+namespace App\Application\Symfony\View;
 
 use App\Presentation\User\ShowListViewModel;
 use Symfony\Component\HttpFoundation\Response;

@@ -2,7 +2,7 @@
 
 namespace App\Presentation\User;
 
-class ShowListViewModel
+final class ShowListViewModel
 {
-
+	public ?array $users;
 }

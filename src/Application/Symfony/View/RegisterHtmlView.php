@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Symfony\View;
+namespace App\Application\Symfony\View;
 
+use App\Application\Symfony\Form\RegisterUserType;
 use App\Domain\User\UseCase\Register\RegisterUserRequest;
-use App\Infrastructure\Symfony\Form\RegisterUserType;
 use App\Presentation\User\RegisterUserHtmlViewModel;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Response;

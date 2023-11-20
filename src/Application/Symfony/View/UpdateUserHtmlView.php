@@ -1,12 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Symfony\View;
+namespace App\Application\Symfony\View;
 
+use App\Application\Symfony\Form\UpdateUserType;
 use App\Domain\User\UseCase\Edit\UpdateUserRequest;
-use App\Domain\User\UseCase\Register\RegisterUserRequest;
-use App\Infrastructure\Symfony\Form\RegisterUserType;
-use App\Infrastructure\Symfony\Form\UpdateUserType;
-use App\Presentation\User\RegisterUserHtmlViewModel;
 use App\Presentation\User\UpdateUserHtmlViewModel;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Response;
