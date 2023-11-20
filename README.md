@@ -12,7 +12,8 @@ yarn run build
 #POST
 #https://127.0.0.1:8000/api/garage
 
-Click on Raw of Body Tab, then add the following parameters :
+Check the "raw" radio of the Body Tab, 
+select JSON in the text format options, then add the following payload :
 
 {
   "name": "My Garage with clean archi test",
